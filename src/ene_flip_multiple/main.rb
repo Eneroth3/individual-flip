@@ -49,6 +49,16 @@ module EneFlipMultiple
     end
   end
 
+  def self.menu_index
+    # Flip Individually Along should be beneath Flip Along in menu.
+    # Flip Along is on different positions depending on whether the Make Unique
+    # action is available.
+    model = Sketchup.active_model
+    selected_instances = model.selection.select { |i| is_instance?(i) }
+    selected_definitions = selected_instances.map { |i| i.definition }.uniq
+    selected_definitions.any? { |d| d.instances.any? { |i| !model.selection.contains?(i) }} ? 14 : 13
+  end
+
   UI.add_context_menu_handler do |menu|
     if flip_available?
       menu = add_submenu(menu, "Flip Individually Along", menu_index)
