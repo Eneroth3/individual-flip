@@ -32,7 +32,7 @@ module EneFlipMultiple
   # Wrapper to menu#add_item that sends the undocumented position argument on
   # Windows only.
   def self.add_menu_item(menu, name, position = nil, &block)
-    if position && Sketchup.platform == :platform_win
+    if position && Sketchup.platform == :platform_win && Sketchup.version.to_i > 16
       menu.add_item(name, position, &block)
     else
       menu.add_item(name, &block)
@@ -42,7 +42,7 @@ module EneFlipMultiple
   # Wrapper to menu#add_submenu that sends the undocumented position argument on
   # Windows only.
   def self.add_submenu(menu, name, position = nil)
-    if position && Sketchup.platform == :platform_win
+    if position && Sketchup.platform == :platform_win && Sketchup.version.to_i > 16
       menu.add_submenu(name, position)
     else
       menu.add_submenu(name)

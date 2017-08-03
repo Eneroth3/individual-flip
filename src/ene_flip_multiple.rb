@@ -9,7 +9,7 @@ module EneFlipMultiple
 
   PLUGIN_ID = File.basename(__FILE__, ".rb")
   PLUGIN_DIR = File.join(File.dirname(__FILE__), PLUGIN_ID)
-  REQUIRED_SU_VERSION = 6
+  REQUIRED_SU_VERSION = 15 # Limited by Group.definition (I don't bother writing code for ancient versions).
 
   EXTENSION = SketchupExtension.new(
     "Eneroth Flip Multiple",
