@@ -17,7 +17,7 @@ module EneFlipMultiple
   )
   EXTENSION.creator     = "Julia Christina Eneroth"
   EXTENSION.description =
-    "Bulk flip groups and components along their individual axes."
+    "Flip multiple groups and components in their individual axes."
   EXTENSION.version     = "1.0.0"
   EXTENSION.copyright   = "#{EXTENSION.creator} 2017"
   Sketchup.register_extension(EXTENSION, true)

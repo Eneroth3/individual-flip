@@ -1,0 +1,5 @@
+Flip multiple groups and components in  their individual axes.
+
+Flip multiple groups and components in their individual axes around their individual bounding box. A sometimes useful compliment to the native flip that applies in the local axes around the combined bounding box of the selection.
+
+Bulk, multiple, numerous, flip, along, around, axis, axes, red, green, blue
