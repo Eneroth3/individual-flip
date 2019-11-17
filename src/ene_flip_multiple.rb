@@ -16,8 +16,7 @@ module EneFlipMultiple
     File.join(PLUGIN_DIR, "main")
   )
   EXTENSION.creator     = "Julia Christina Eneroth"
-  EXTENSION.description =
-    "Flip multiple groups and components in their individual axes."
+  EXTENSION.description = "Flip multiple components in their individual axes."
   EXTENSION.version     = "1.0.0"
   EXTENSION.copyright   = "#{EXTENSION.creator} 2017"
   Sketchup.register_extension(EXTENSION, true)
